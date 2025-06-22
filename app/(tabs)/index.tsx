@@ -6,19 +6,20 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function HomeScreen() {
   const router = useRouter();
+
   return (
-    <>
+    <View className="flex-1 bg-[#0f172a]">
       <StatusBar style="light" translucent />
-      <SafeAreaView className="flex-1 bg-[#0f172a]">
+      <SafeAreaView className="flex-1">
         {/* Top Bar */}
         <View className="flex-row justify-end px-4 pt-4">
-          <Pressable onPress={() => router.push("/settings")}>
+          <Pressable onPress={() => router.navigate("/settings")}>
             <Ionicons name="settings-outline" size={26} color="#94a3b8" />
           </Pressable>
         </View>
 
         <View className="flex-1 px-4 py-6">
-          {/* Progress Ring (placeholder) */}
+          {/* Progress Ring */}
           <View className="w-56 h-56 rounded-full bg-[#1e3a8a] opacity-70 mx-auto justify-center items-center">
             <Text className="text-white text-4xl font-bold">850</Text>
             <Text className="text-white text-sm">/ 2000</Text>
@@ -50,6 +51,6 @@ export default function HomeScreen() {
           </Pressable>
         </View>
       </SafeAreaView>
-    </>
+    </View>
   );
 }

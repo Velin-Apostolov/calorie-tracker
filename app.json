@@ -1,5 +1,6 @@
 {
   "expo": {
+    "backgroundColor": "#0f172a",
     "name": "cal-tracker",
     "slug": "cal-tracker",
     "version": "1.0.0",
